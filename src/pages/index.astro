@@ -1,4 +1,6 @@
 ---
+import AnnouncementBar from "../components/AnnouncementBar.astro";
+
 const site = {
   "title": "flags-2-env",
   "description": "flags-2-env makes .cli-flags.toml the typed authority for argv, environment keys, defaults, aliases, help, and precedence across runtimes.",
@@ -84,6 +86,13 @@ const canonical = new URL(Astro.url.pathname, Astro.site ?? "https://flags-2-env
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
+    <AnnouncementBar
+      storageKey="site-announcement:flags-2-env:v1"
+      message="Happy 2026, y’all!"
+      href="https://github.com/flags-2-env"
+      linkLabel="See what we’re building"
+      tone="rust"
+    />
     <main
       id="main"
       class:list={["site", `layout-${site.layout}`, `tone-${site.tone}`]}
